@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/whole_item_winner"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/winner_item_whole"
+        android:background="@color/white"
+        android:layout_marginBottom="10dp"
+        >
+        <com.jf.luckydollar.CircleImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/winner_avatar"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="User name"
+            android:textSize="15dp"
+            android:id="@+id/winner_name"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/winner_avatar"
+            android:layout_toEndOf="@+id/winner_avatar"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/ade_red"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2016-12-20"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:id="@+id/winner_date"
+            android:layout_alignTop="@+id/winner_name"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/winner_name"
+            android:layout_alignStart="@+id/winner_name"
+            android:layout_alignRight="@+id/winner_date"
+            android:layout_alignEnd="@+id/winner_date"
+            android:layout_below="@+id/winner_name"
+            android:background="@color/divider"
+            android:layout_marginBottom="5dp">
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="[306期][Coach]克罗斯比真皮迷你手提包！"
+                android:textSize="15dp"
+                android:textColor="@color/ade_grey"
+                android:id="@+id/winner_goods_name"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="5dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="支持一元夺宝！我真是太幸运了！支持一元夺宝！我真是太幸运了！支持一元夺宝！我真是太幸运了！"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                android:id="@+id/winner_comment"
+                android:layout_below="@+id/winner_goods_name"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="-1dp"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

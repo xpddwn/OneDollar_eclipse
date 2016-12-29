@@ -1,0 +1,66 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jf.fragment.CartFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="31dp"
+        android:background="@color/white"
+        android:layout_gravity="center_horizontal|bottom">
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="#FF909090" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="My Total:"
+            android:maxLines="1"
+            android:gravity="bottom"
+            android:id="@+id/cart_my_total"
+            android:textSize="26dp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:maxLines="1"
+            android:text="1.00"
+            android:id="@+id/cart_total_num"
+            android:textSize="26dp"
+            android:textColor="@color/black"
+            android:gravity="bottom"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/cart_my_total"
+            android:layout_toEndOf="@+id/cart_my_total"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="29dp"
+
+            android:text="Check out"
+            android:id="@+id/cart_check_bt"
+            android:background="@color/ade_red"
+            android:textColor="@color/white"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true" />
+
+
+    </RelativeLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="469dp"
+        android:fadeScrollbars="true"
+        android:id="@+id/cart_listview"
+        android:layout_gravity="center_horizontal|top" />
+
+
+</FrameLayout>

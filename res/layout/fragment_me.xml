@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_span="3"
+        android:background="@drawable/textview_border"
+        android:layout_weight="2.0"
+        >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="用户"
+            android:textColor="#000000"
+            android:background="@drawable/bg_special_disease_circle" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Shuai Yuan"
+            android:gravity="center"
+            android:id="@+id/name"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="banlance 1$"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200px"
+        android:orientation="horizontal"
+        android:layout_weight="1.0"
+        >
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:text="My fantasies"
+            android:layout_weight="1.0"
+            android:id="@+id/myFantasies"
+            android:gravity="center"
+            android:background="@drawable/textview_border"
+           >
+        </TextView>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:text="My Rewards"
+            android:layout_weight="1.0"
+            android:id="@+id/myRewards"
+            android:gravity="center"
+            android:background="@drawable/textview_border">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Address"
+            android:layout_weight="1.0"
+            android:id="@+id/address"
+            android:background="@drawable/textview_border">
+        </TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200px"
+        android:orientation="horizontal"
+        android:layout_weight="1.0"
+        >
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:text="Payment"
+            android:layout_weight="1.0"
+            android:id="@+id/payment"
+            android:gravity="center"
+            android:background="@drawable/textview_border">
+        </TextView>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:text="Deposit"
+            android:layout_weight="1.0"
+            android:id="@+id/deposit"
+            android:gravity="center"
+            android:background="@drawable/textview_border">
+        </TextView>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:text="My Account"
+            android:layout_weight="1.0"
+            android:id="@+id/account"
+            android:gravity="center"
+            android:background="@drawable/textview_border">
+        </TextView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200px"
+        android:orientation="horizontal"
+        android:layout_weight="1.0"
+        >
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:text="My Winner Stories"
+            android:layout_weight="1.0"
+            android:id="@+id/story"
+            android:gravity="center"
+            android:background="@drawable/textview_border">
+        </TextView>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:text="APP Settings"
+            android:layout_weight="1.0"
+            android:id="@+id/settings"
+            android:gravity="center"
+            android:background="@drawable/textview_border">
+        </TextView>
+
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:text="Online Customer Serrvice"
+            android:layout_weight="1.0"
+            android:id="@+id/service"
+            android:gravity="center"
+            android:background="@drawable/textview_border">
+        </TextView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200px"
+        android:orientation="horizontal"
+        android:layout_weight="1.0"
+        >
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:text="Q &amp; A"
+            android:layout_weight="1.0"
+            android:id="@+id/qa"
+            android:gravity="center"
+            android:background="@drawable/textview_border">
+        </TextView>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:background="@drawable/textview_border">
+        </TextView>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:background="@drawable/textview_border">
+        </TextView>
+    </LinearLayout>
+
+</LinearLayout>

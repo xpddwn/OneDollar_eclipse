@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">OneDollar</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    
+    <!-- 提示 -->
+    <string name="no_network_connection_toast">网络异常,请检查您的网络设置</string>
+    <string name="server_exception">系统繁忙,请稍后再试</string>
+    <string name="user_no_login">您尚未登录,请登录后操作</string>
+    <string name="user_no_login_out">您的账号已经在其他地方登录，您已下线</string>
+    <string name="confirm">确认</string>
+    <string name="cancel">取消</string>
+    <string name="tip">提示</string>
+    <string name="done">完成</string>
+    
+    <!-- 联系用户相关 -->
+    <string name="app_ok">确定</string>
+    <string name="app_cancel">取消</string>
+
+</resources>
