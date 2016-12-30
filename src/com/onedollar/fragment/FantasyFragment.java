@@ -13,8 +13,8 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
-import com.example.onedollar.MyApplication;
 import com.example.onedollar.R;
+import com.onedollar.base.BaseFragment;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -31,7 +31,7 @@ import java.util.zip.Inflater;
  * create an instance of this fragment.
  */
 
-public class FantasyFragment extends Fragment {
+public class FantasyFragment extends BaseFragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";

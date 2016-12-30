@@ -21,6 +21,8 @@ import android.widget.TextView;
 
 import com.example.onedollar.MainActivity;
 import com.example.onedollar.R;
+import com.onedollar.base.BaseFragment;
+
 import android.os.Handler;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -36,7 +38,7 @@ import java.util.logging.LogRecord;
  * Use the {@link UpcomingFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class UpcomingFragment extends Fragment {
+public class UpcomingFragment extends BaseFragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";

@@ -2,12 +2,10 @@ package com.onedollar.fragment;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.provider.ContactsContract;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -17,12 +15,10 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
-import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
-import com.example.onedollar.MainActivity;
-import com.example.onedollar.MyApplication;
 import com.example.onedollar.R;
+import com.onedollar.base.BaseFragment;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -35,7 +31,7 @@ import java.util.HashMap;
  * Use the {@link WinnersFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class WinnersFragment extends Fragment {
+public class WinnersFragment extends BaseFragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";

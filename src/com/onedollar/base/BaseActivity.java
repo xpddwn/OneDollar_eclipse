@@ -92,8 +92,8 @@ public class BaseActivity extends FragmentActivity implements
 		// TODO Auto-generated method stub
 		super.onCreate(arg0);
 		// 透明状态栏
-		getWindow()
-				.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+//		getWindow()
+//				.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
 		// 透明导航栏
 		// getWindow().addFlags(
 		// WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);

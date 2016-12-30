@@ -18,5 +18,14 @@
     <!-- 联系用户相关 -->
     <string name="app_ok">确定</string>
     <string name="app_cancel">取消</string>
+    
+    <!-- 侧边栏分页 -->
+    <string name="all_goods">All goods</string>
+    <string name="automobile">automobile</string>
+    <string name="Gold_jewelry">Gold jewelry</string>
+    <string name="Brand_watch">Brand watch</string>
+    <string name="Digital_video">Digital video</string>
+    <string name="Computer_office">Computer office</string>
+    <string name="other">Other</string>
 
 </resources>

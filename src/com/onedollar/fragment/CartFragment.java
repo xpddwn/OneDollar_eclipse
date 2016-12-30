@@ -13,8 +13,8 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
 import com.example.onedollar.MainActivity;
-import com.example.onedollar.MyApplication;
 import com.example.onedollar.R;
+import com.onedollar.base.BaseFragment;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -29,7 +29,7 @@ import java.util.List;
  * Use the {@link CartFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class CartFragment extends Fragment {
+public class CartFragment extends BaseFragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -103,7 +103,7 @@ public class CartFragment extends Fragment {
             listItem.add(map);
         }
 
-        SimpleAdapter sa=new SimpleAdapter(MyApplication.newInstance(),listItem,R.layout.item_cart,
+        SimpleAdapter sa=new SimpleAdapter(getActivity(),listItem,R.layout.item_cart,
                 new String[] {"goods_image","goods_name", "goods_left","goods_total","good_want_buy"},
                 new int[] {R.id.goods_image,R.id.goods_name,R.id.goods_left,R.id.goods_total,R.id.good_want_buy});
         lv_cart.setAdapter(sa);
