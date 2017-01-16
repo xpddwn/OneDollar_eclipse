@@ -1,95 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/whole_item_winner"
-    android:background="@color/white">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="80dp" >
+
+        <com.onedollar.view.RoundImageView
+            android:id="@+id/winner_avatar"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/user_advatar" />
+
+        <TextView
+            android:id="@+id/winner_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/winner_avatar"
+            android:text="Yuan Shuai"
+            android:textColor="@color/lucky_name"
+            android:textSize="16sp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/winner_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:text="2016.12.20"
+            android:textColor="@color/merchandise_winner_title"
+            android:textSize="16dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/winner_simple_talk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:text="I am so lucky!"
+        android:textColor="@color/merchandise_content"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/winner_goods_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="2dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="Apple Watch 2st gen Sport MLC62JA ROSE"
+        android:textColor="@color/merchandise_winner_title"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/winner_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:text="Plus you could check the authenticity at app store"
+        android:textColor="@color/merchandise_content"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:id="@+id/sample_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginTop="5dp"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/sample_comment_1" />
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/sample_comment_2" />
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/sample_comment_3" />
+    </LinearLayout>
+    
+    <View 
+        android:layout_width="fill_parent"
+        android:layout_height="8dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/cart_bg"/>
+
+    <!--
+          <GridView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/winner_item_whole"
-        android:background="@color/white"
-        android:layout_marginBottom="10dp"
-        >
-        <com.onedollar.view.RoundImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:id="@+id/winner_avatar"
-            android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginTop="20dp"
-            />
+        android:id="@+id/winner_share_grid"
+        android:numColumns="4"
+        android:columnWidth="100px"
+        android:stretchMode="columnWidth">
+    </GridView>
+    -->
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:maxLines="1"
-            android:text="User name"
-            android:textSize="15dp"
-            android:id="@+id/winner_name"
-            android:layout_alignParentTop="true"
-            android:layout_toRightOf="@+id/winner_avatar"
-            android:layout_toEndOf="@+id/winner_avatar"
-            android:layout_marginLeft="15dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="10dp"
-            android:textColor="@color/ade_red"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="2016-12-20"
-            android:textSize="15dp"
-            android:textColor="@color/black"
-            android:id="@+id/winner_date"
-            android:layout_alignTop="@+id/winner_name"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginRight="10dp"
-            android:layout_marginEnd="10dp" />
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/winner_name"
-            android:layout_alignStart="@+id/winner_name"
-            android:layout_alignRight="@+id/winner_date"
-            android:layout_alignEnd="@+id/winner_date"
-            android:layout_below="@+id/winner_name"
-            android:background="@color/divider"
-            android:layout_marginBottom="5dp">
-            >
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="[306期][Coach]克罗斯比真皮迷你手提包！"
-                android:textSize="15dp"
-                android:textColor="@color/ade_grey"
-                android:id="@+id/winner_goods_name"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginTop="5dp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="支持一元夺宝！我真是太幸运了！支持一元夺宝！我真是太幸运了！支持一元夺宝！我真是太幸运了！"
-                android:textSize="18dp"
-                android:textColor="@color/black"
-                android:id="@+id/winner_comment"
-                android:layout_below="@+id/winner_goods_name"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="-1dp"/>
-
-        </RelativeLayout>
-
-    </RelativeLayout>
-</RelativeLayout>
+</LinearLayout>

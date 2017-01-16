@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/upcoming_linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/textview_border"
+    android:gravity="center"
+    android:padding="0.3dp"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/upcoming_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        android:src="@drawable/sample_watch_1" />
+
+    <TextView
+        android:id="@+id/merchandise_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:lineSpacingExtra="3dp"
+        android:maxLines="2"
+        android:text="Apple Watch 1st gen Sport MLC62JA ROSE xxxxxxx"
+        android:textColor="@color/merchandise_text_title"
+        android:textSize="16sp" 
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"/>
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="About to be revealed"
+        android:textColor="@color/lucky_name"
+        android:textSize="14sp" 
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"/>
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="04:03:55"
+        android:textColor="@color/lucky_name"
+        android:textSize="40sp" 
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"/>
+</LinearLayout>

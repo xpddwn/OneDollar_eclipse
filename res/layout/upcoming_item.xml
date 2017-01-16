@@ -1,110 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/upcoming_linearLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:padding="10dp"
     android:background="@drawable/textview_border"
-    android:id="@+id/upcoming_linearLayout"
-    >
+    android:gravity="center"
+    android:padding="0.3dp"
+    android:orientation="vertical" >
 
     <ImageView
-        android:src="@drawable/example"
         android:id="@+id/upcoming_image"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:scaleType="fitCenter"
-        />
+        android:src="@drawable/sample_watch_2" />
+
+    <TextView
+        android:id="@+id/merchandise_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:lineSpacingExtra="3dp"
+        android:maxLines="2"
+        android:text="Apple Watch 2st gen Sport MLC62JA ROSE xxxxxxx"
+        android:textColor="@color/merchandise_text_title"
+        android:textSize="16sp" 
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"/>
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_marginTop="5dp"
-            android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/marchandise_bg"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="简介:"
-            />
-        <TextView
-            android:id="@+id/upcoming_introduce"
-            android:layout_marginTop="5dp"
-            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/merchandise_winner_title"
+                android:textSize="14sp"
+                android:text="Winners:" />
+
+            <TextView
+                android:id="@+id/upcoming_winner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="14sp"
+                android:paddingLeft="5dp"
+                android:textColor="@color/merchandise_winner_name"
+                android:text="xxxxx" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="xxxxx"
-            />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_marginTop="5dp"
-            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/merchandise_winner_title"
+                android:textSize="14sp"
+                android:text="Lucky number:" />
+
+            <TextView
+                android:id="@+id/upcoming_lucky_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="14sp"
+                android:paddingLeft="5dp"
+                android:textColor="@color/lucky_name"
+                android:text="123123123" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="获奖者:"
-            />
-        <TextView
-            android:id="@+id/upcoming_winner"
-            android:layout_marginTop="5dp"
-            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/merchandise_winner_title"
+                android:textSize="14sp"
+                android:text="The participation:" />
+
+            <TextView
+                android:id="@+id/upcoming_participation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="14sp"
+                android:paddingLeft="5dp"
+                android:textColor="@color/merchandise_content"
+                android:text="400 people" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="xxxxx"
-            />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_marginTop="5dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="幸运号"
-            />
-        <TextView
-            android:id="@+id/upcoming_luckynumber"
-            android:layout_marginTop="5dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="123123123"
-            />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_marginTop="5dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="本次参与:"
-            />
-        <TextView
-            android:id="@+id/upcoming_number"
-            android:layout_marginTop="5dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="44"
-            />
-        <TextView
-            android:layout_marginTop="5dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="人次"
-            />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_marginTop="5dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="揭晓时间:"
-            />
-        <TextView
-            android:id="@+id/upcoming_time"
-            android:layout_marginTop="5dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="95-23 12:22"
-            />
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/merchandise_winner_title"
+                android:textSize="14sp"
+                android:text="Time of:" />
+
+            <TextView
+                android:id="@+id/upcoming_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="14sp"
+                android:paddingLeft="5dp"
+                android:textColor="@color/merchandise_content"
+                android:text="12.22 10:50" />
+        </LinearLayout> 
     </LinearLayout>
 </LinearLayout>

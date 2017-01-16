@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/whole_item_pay_success">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relativeLayout4">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pay_success_goods_name"
+            android:text="goods name"
+            android:textColor="@color/black"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pay_success_good_num"
+            android:text="12 entries"
+            android:textColor="@color/red"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/pay_success_goods_name"
+            android:layout_alignLeft="@+id/pay_success_goods_name"
+            android:layout_alignStart="@+id/pay_success_goods_name" />
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

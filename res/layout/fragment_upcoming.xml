@@ -1,19 +1,20 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.onedollar.fragment.UpcomingFragment"
+    android:orientation="vertical"
     android:background="#ffffff">
 
     <!-- TODO: Update blank fragment layout -->
-    <GridView
+    
+	<GridView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/upcominggrid"
         android:numColumns="2"
         android:columnWidth="100px"
         android:stretchMode="columnWidth">
-
     </GridView>
 
-</FrameLayout>
+</LinearLayout>

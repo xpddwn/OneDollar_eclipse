@@ -13,12 +13,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.onedollar.R;
+import com.example.onedollar.Winner_detail;
 import com.onedollar.base.BaseFragment;
+import com.onedollar.data.Constants.msg;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -88,7 +91,7 @@ public class WinnersFragment extends BaseFragment {
                     Intent intent = new Intent();
 
                     //设置Intent的class属性，跳转到SecondActivity
-//                    intent.setClass(getActivity(), Winner_detail.class);
+                    intent.setClass(getActivity(), Winner_detail.class);
                     startActivity(intent);
                 }
 
@@ -102,21 +105,6 @@ public class WinnersFragment extends BaseFragment {
 
         MyAdapter adapter = new MyAdapter(getActivity());
         lv_winner.setAdapter(adapter);
-//        ArrayList<HashMap<String, Object>> listItem = new ArrayList<HashMap<String, Object>>();
-//        for(int i=0;i<6;i++)
-//        {
-//            HashMap<String, Object> map = new HashMap<String, Object>();
-//            map.put("winner_avatar", R.drawable.example);//图像资源的ID
-//            map.put("winner_name", "Uesr "+i);
-//            map.put("winner_date"," 2016-12- "+i);
-//            map.put("winner_goods_name","["+i+"期][Coach]克罗斯比真皮迷你手提包！");
-//            map.put("winner_comment",i+" 支持一元夺宝！我真是太幸运了！支持一元夺宝！我真是太幸运了！");
-//            listItem.add(map);
-//        }
-//        SimpleAdapter sa=new SimpleAdapter(MyApplication.newInstance(),listItem,R.layout.item_winner,
-//                new String[] {"winner_avatar","winner_name", "winner_date","winner_goods_name","winner_comment"},
-//                new int[] {R.id.winner_avatar,R.id.winner_name,R.id.winner_date,R.id.winner_goods_name,R.id.winner_comment});
-//        lv_winner.setAdapter(sa);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -141,16 +129,6 @@ public class WinnersFragment extends BaseFragment {
         mListener = null;
     }
 
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p/>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
@@ -160,7 +138,7 @@ public class WinnersFragment extends BaseFragment {
     {
         public ImageView winner_avatar;
         public TextView winner_date,winner_goods_name,winner_comment,winner_name;
-        public RelativeLayout relativeLayout;
+        public LinearLayout mLinearLayout,mSampleLayout;
 
     }
     public class MyAdapter extends BaseAdapter{
@@ -200,7 +178,8 @@ public class WinnersFragment extends BaseFragment {
                 holder.winner_comment = (TextView)convertView.findViewById(R.id.winner_comment);
                 holder.winner_name = (TextView)convertView.findViewById(R.id.winner_name);
 
-                holder.relativeLayout = (RelativeLayout)convertView.findViewById(R.id.winner_item_whole);
+                holder.mLinearLayout = (LinearLayout)convertView.findViewById(R.id.whole_item_winner);
+                holder.mSampleLayout = (LinearLayout)convertView.findViewById(R.id.sample_layout);
                 convertView.setTag(holder);
             }else{
                 holder = (ViewHolder)convertView.getTag();
@@ -209,16 +188,13 @@ public class WinnersFragment extends BaseFragment {
             //eg:holder.img.setText()
             //Typeface iconfont = Typeface.createFromAsset(getAssets(),"iconfont/iconfont.ttf");
             //holder.course_icon.setTypeface(iconfont);
-
-
-            Log.d("debug", "getview");
-            holder.winner_avatar.setImageResource(R.drawable.example);
-            holder.winner_date.setText("2016-12-12");
-            holder.winner_goods_name.setText("[第x期][Coach]克罗斯比真皮迷你手提包！");
-            holder.winner_comment.setText("支持一元夺宝！我真是太幸运了！支持一元夺宝！我真是太幸运了");
-            holder.winner_name.setText("Uesr ");
+            
             final int p = position;
-            holder.relativeLayout.setOnClickListener(new View.OnClickListener() {
+            if(p%2==0){
+            	holder.mSampleLayout.setVisibility(View.VISIBLE);
+            }
+            
+            holder.mLinearLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Message msg = new Message();

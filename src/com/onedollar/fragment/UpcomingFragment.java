@@ -1,9 +1,7 @@
 package com.onedollar.fragment;
 
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Message;
@@ -15,11 +13,10 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
-import com.example.onedollar.MainActivity;
+import com.example.onedollar.MerchandiseActivity;
 import com.example.onedollar.R;
 import com.onedollar.base.BaseFragment;
 
@@ -28,7 +25,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.logging.LogRecord;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -107,7 +103,7 @@ public class UpcomingFragment extends BaseFragment {
         getData();
         //新建适配器
         String [] from ={"image","text"};
-        int [] to = {R.id.upcoming_image,R.id.upcoming_introduce};
+        int [] to = {R.id.upcoming_image,R.id.upcoming_winner};
         //sim_adapter = new SimpleAdapter(getActivity(), data, R.layout.upcoming_item, from, to);
         //配置适配器
         MyAdapter adapter = new MyAdapter(getActivity());
@@ -130,7 +126,7 @@ public class UpcomingFragment extends BaseFragment {
 //                    infolist.add(data.get(position).get("status"));
 
                     //设置Intent的class属性，跳转到SecondActivity
-//                    intent.setClass(getActivity(), MerchandiseActivity.class);
+                    intent.setClass(getActivity(), MerchandiseActivity.class);
                     intent.putStringArrayListExtra("infolist", infolist);
                     startActivity(intent);
 
@@ -155,7 +151,7 @@ public class UpcomingFragment extends BaseFragment {
     }
     static class ViewHolder
     {
-        public TextView upcoming_introduce,upcoming_winner,upcoming_luckynumber,upcoming_number,upcoming_time;
+        public TextView upcoming_winner,upcoming_luckynumber,upcoming_participation,upcoming_time;
         public LinearLayout upcoming_linearLayout;
 
     }
@@ -184,21 +180,24 @@ public class UpcomingFragment extends BaseFragment {
             ViewHolder holder = null;
             if(convertView == null){
                 holder = new ViewHolder();
-                convertView = mInflater.inflate(R.layout.upcoming_item,null);
-                //映射 eg：holder.img = (ImagView)convertView.findViewById(R.id.img);
-                //holder.itemtablelayout = (TableLayout)convertView.findViewById(R.id.selcourse_tablelayout);
-                holder.upcoming_introduce = (TextView)convertView.findViewById(R.id.upcoming_introduce);
-                holder.upcoming_winner = (TextView)convertView.findViewById(R.id.upcoming_winner);
-                holder.upcoming_luckynumber = (TextView)convertView.findViewById(R.id.upcoming_luckynumber);
+                if(position==0||position==1){
+                	convertView = mInflater.inflate(R.layout.upcomed_item,null);
+                }
+                else{
+                	convertView = mInflater.inflate(R.layout.upcoming_item,null);
+                    //映射 eg：holder.img = (ImagView)convertView.findViewById(R.id.img);
+                    //holder.itemtablelayout = (TableLayout)convertView.findViewById(R.id.selcourse_tablelayout);
+                    holder.upcoming_winner = (TextView)convertView.findViewById(R.id.upcoming_winner);
+                    holder.upcoming_luckynumber = (TextView)convertView.findViewById(R.id.upcoming_lucky_name);
 
-                holder.upcoming_number = (TextView)convertView.findViewById(R.id.upcoming_number);
-                holder.upcoming_time = (TextView)convertView.findViewById(R.id.upcoming_time);
+                    holder.upcoming_participation = (TextView)convertView.findViewById(R.id.upcoming_participation);
+                    holder.upcoming_time = (TextView)convertView.findViewById(R.id.upcoming_time);
+                }
                 holder.upcoming_linearLayout = (LinearLayout)convertView.findViewById(R.id.upcoming_linearLayout);
                 convertView.setTag(holder);
             }else{
                 holder = (ViewHolder)convertView.getTag();
             }
-            holder.upcoming_introduce.setText((String)data.get(position).get("text"));
 
             final int p = position;
             holder.upcoming_linearLayout.setOnClickListener(new View.OnClickListener() {

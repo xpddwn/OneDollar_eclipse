@@ -4,7 +4,7 @@
     <string name="app_name">OneDollar</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    
+
     <!-- 提示 -->
     <string name="no_network_connection_toast">网络异常,请检查您的网络设置</string>
     <string name="server_exception">系统繁忙,请稍后再试</string>
@@ -14,11 +14,11 @@
     <string name="cancel">取消</string>
     <string name="tip">提示</string>
     <string name="done">完成</string>
-    
+
     <!-- 联系用户相关 -->
     <string name="app_ok">确定</string>
     <string name="app_cancel">取消</string>
-    
+
     <!-- 侧边栏分页 -->
     <string name="all_goods">All goods</string>
     <string name="automobile">automobile</string>
@@ -27,5 +27,41 @@
     <string name="Digital_video">Digital video</string>
     <string name="Computer_office">Computer office</string>
     <string name="other">Other</string>
+
+    <!-- 标题 -->
+    <string name="fantasy_title">Daily Dollar Fantasy</string>
+    <string name="shopping_upcoming">Upcoming</string>
+    <string name="winners">Winners</string>
+    <string name="cart_title">Shopping Cart</string>
+    <string name="previous_title">Previous</string>
+    <string name="reviews_title">Reviews</string>
+    <string name="specific_title">Specifics</string>
+    <string name="clause_title">clause</string>
+    <string name="identity_title">Identity</string>
+    <string name="modify_title">Modify</string>
+    <string name="myaccount_title">Account</string>
+    <string name="setting_title">Setting</string>
+    <string name="payment_title">Payment</string>
+    <string name="deposit_title">Deposit</string>
+    <string name="QA_title">QA</string>
+    
+
+    <!-- 底部导航 -->
+    <string name="tab_home">Fantasy</string>
+    <string name="tab_win">Upcoming</string>
+    <string name="tab_find">Winner</string>
+    <string name="tab_cart">Cart</string>
+    <string name="tab_user">Me</string>
+
+    <!-- 示例 -->
+    <string name="article1">Article 1. User account password security</string>
+    <string name="clause1">\t\tCEFC and any agents or CEFC and any agents or CEFC and any agents or CEFC and any agents or CEFC and any agents or CEFC and any agents or CEFC and any agents or CEFC and any agents or CEFC and any agents or CEFC and any agents or  </string>
+    <string name="article2">Article 2. Indiana rules </string>
+    <string name="clause2">\t\tCEFC and any agents or CEFC and any agents or CEFC and any agents or CEFC and any agents or CEFC and any agents or CEFC and any agents or CEFC and any agents or CEFC and any agents or CEFC and any agents or CEFC and any agents or CEFC and any agents or CEFC and any agents or </string>
+    <string name="question1">How to partocopate in Indiana?</string>
+    <string name="question2">Indiana is how to calculate the lucky number?</string>
+    <string name="question3">Is the product genuine? How to guarantee?</string>
+    <string name="question4">Receive the goods can return?</string>
+    <string name="answer1">\t\tand any agents or contractors and any agents or contractors and any agents or contractors and any agents or contractors and any agents or contractors </string>
 
 </resources>

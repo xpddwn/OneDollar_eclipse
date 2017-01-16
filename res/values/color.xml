@@ -1,10 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <color name="white">#ffffff</color>
     <color name="text_view_unclickable">#ffb0ad</color>
     <color name="ade_red">#d97d39</color>
-    
-     <!-- common colors -->
+    <color name="title_bar">#f73859</color>
+    <color name="user_head_bag">#333335</color>
+    <color name="tab_text_red">#DA3651</color>
+    <color name="tab_text_normal">#A8A8A8</color>
+    <color name="merchandise_text_title">#3b3b3b</color>
+    <color name="marchandise_bg">#f7eed2</color>
+    <color name="merchandise_winner_title">#7a7a7a</color>
+    <color name="merchandise_winner_name">#2e91e8</color>
+    <color name="lucky_name">#f73859</color>
+    <color name="merchandise_content">#3c3c3c</color>
+    <color name="cart_bg">#eeeeee</color>
+    <color name="background">#eeeeee</color> <!-- 背景色 -->
+    <color name="button_color">#f73859</color> <!-- 按钮颜色 -->
+    <color name="border_clo">#ccc</color> <!-- 分割线颜色 -->
+    <color name="textcolor">#108ae6</color>
+    <color name="lightdark">#373739</color>
+    <color name="upcomingitem">#f7eed2</color>
+    <color name="darkwhite">#fafafa</color>
+    <color name="darkyellow">#fdc929</color>
+
+    <!-- common colors -->
     <color name="green">#66aa00</color>
     <color name="black">#333333</color>
     <color name="grey">#ababab</color>
@@ -15,13 +35,20 @@
     <color name="pure_white">#ffffff</color>
     <color name="holo_blue">#ff005892</color>
     <color name="sixty_transparent">#66e5eadd</color>
+    <color name="transparent">#00000000</color>
+    <color name="red">#FF0000</color> <!-- 红色 -->
     <color name="action_pressed">#d8e3c5</color>
     <color name="disabled">#FFB3B3B3</color>
     <color name="fifty_percent_white">#99ffffff</color>
     <color name="darker_grey">#999999</color>
     <color name="black_grey">#727272</color>
     <color name="light_grey">#ebebeb</color>
+    <color name="yellow">#ffff00</color> <!-- 黄色 -->
+    <color name="colorPrimary">#f73859</color>
+    <color name="lightgray">#eeeeee</color> <!-- 亮灰色 -->
     <color name="lightgrey">#ff888888</color>
+    <color name="kindgray">#e5e5e5</color>
+    <color name="silvertext">#c1c1c1</color>
     <color name="divider">#15000000</color>
-    
+
 </resources>

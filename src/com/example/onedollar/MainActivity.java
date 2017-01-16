@@ -1,33 +1,27 @@
 package com.example.onedollar;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v4.widget.DrawerLayout.DrawerListener;
 import android.view.KeyEvent;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.View.OnTouchListener;
-import android.widget.LinearLayout;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.onedollar.base.BaseActivity;
 import com.onedollar.fragment.*;
 import com.onedollar.base.BaseFragment;
-import com.onedollar.data.Preferences;
 import com.example.onedollar.R;
 
 public class MainActivity extends BaseActivity {
-	private DrawerLayout mSlidingMenu = null;
 	private BaseFragment mCurrentFragment = null;
 	private BaseFragment[] mFragments = null;
-	private View mMenu = null;
-	private LinearLayout mLinearLayout = null;
-
-	private boolean isFirstStart = false;
 	private int mCurrentRadioId = -1;
+	private ImageView mCategoryImg = null;
+	private TextView mTitleTextView = null;
+	private RelativeLayout mTitleRelativeLayout = null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -60,55 +54,19 @@ public class MainActivity extends BaseActivity {
 		findViewById(mCurrentRadioId).performClick();
 	}
 
-	private void setListener() {
-		findViewById(R.id.menu_my_answer).setOnClickListener(this);
-		findViewById(R.id.menu_my_introduce).setOnClickListener(this);
-		findViewById(R.id.menu_my_msg).setOnClickListener(this);
-		findViewById(R.id.menu_my_question).setOnClickListener(this);
-		findViewById(R.id.menu_my_follow).setOnClickListener(this);
-		findViewById(R.id.menu_setting).setOnClickListener(this);
-		findViewById(R.id.menu_koubei).setOnClickListener(this);
+	private void findview() {
+		mCategoryImg = (ImageView)findViewById(R.id.btn_category);
+		mTitleTextView = (TextView)findViewById(R.id.title_content);
+		mTitleRelativeLayout = (RelativeLayout)findViewById(R.id.title);
+	}
 
+	private void setListener() {
 		findViewById(R.id.shopping_fantasy).setOnClickListener(this);
 		findViewById(R.id.shopping_upcoming).setOnClickListener(this);
 		findViewById(R.id.shopping_winner).setOnClickListener(this);
 		findViewById(R.id.shopping_cart).setOnClickListener(this);
 		findViewById(R.id.user_setting).setOnClickListener(this);
-		mMenu.setOnTouchListener(new OnTouchListener() {
-			@SuppressLint("ClickableViewAccessibility")
-			@Override
-			public boolean onTouch(View v, MotionEvent event) {
-
-				return true;
-			}
-
-		});
-		mSlidingMenu.setDrawerListener(new DrawerListener() {
-
-			@Override
-			public void onDrawerStateChanged(int arg0) {
-
-			}
-
-			@Override
-			public void onDrawerSlide(View arg0, float arg1) {
-
-			}
-
-			@Override
-			public void onDrawerOpened(View arg0) {
-				if (Preferences.getIsLogin()) {
-					// mPersonInfo = Preferences.getLocalUserInfo();
-				} else {
-					// mPersonInfo = null;
-				}
-			}
-
-			@Override
-			public void onDrawerClosed(View arg0) {
-
-			}
-		});
+		findViewById(R.id.btn_category).setOnClickListener(this);
 	}
 
 	@Override
@@ -118,43 +76,42 @@ public class MainActivity extends BaseActivity {
 
 	private void onClickViewId(final int id) {
 		switch (id) {
-		case R.id.menu_my_answer:
-			// startActivity();
-			return;
-		case R.id.menu_my_question:
-			// startActivity();
-			return;
-		case R.id.menu_my_follow:
-			// startActivity();
-			return;
-		case R.id.menu_my_msg:
-			// startActivity();
-			return;
-		case R.id.menu_my_introduce:
-			// startActivity();
-			return;
-		case R.id.menu_setting:
-			// startActivity();
-			return;
 		case R.id.shopping_upcoming:
 			switchFragment(mFragments[1]);
 			mCurrentRadioId = id;
+			mCategoryImg.setVisibility(View.GONE);
+			mTitleTextView.setText(R.string.shopping_upcoming);
+			mTitleRelativeLayout.setVisibility(View.VISIBLE);
 			return;
 		case R.id.shopping_winner:
 			switchFragment(mFragments[2]);
 			mCurrentRadioId = id;
+			mCategoryImg.setVisibility(View.GONE);
+			mTitleTextView.setText(R.string.winners);
+			mTitleRelativeLayout.setVisibility(View.VISIBLE);
 			return;
 		case R.id.shopping_fantasy:
 			switchFragment(mFragments[0]);
 			mCurrentRadioId = id;
+			mCategoryImg.setVisibility(View.VISIBLE);
+			mTitleTextView.setText(R.string.fantasy_title);
+			mTitleRelativeLayout.setVisibility(View.VISIBLE);
 			return;
 		case R.id.shopping_cart:
 			switchFragment(mFragments[3]);
 			mCurrentRadioId = id;
+			mCategoryImg.setVisibility(View.GONE);
+			mTitleTextView.setText(R.string.cart_title);
+			mTitleRelativeLayout.setVisibility(View.VISIBLE);
 			return;
 		case R.id.user_setting:
 			switchFragment(mFragments[4]);
 			mCurrentRadioId = id;
+			mTitleRelativeLayout.setVisibility(View.GONE);
+			return;
+		
+		case R.id.btn_category:
+			
 			return;
 
 		default:
@@ -185,11 +142,6 @@ public class MainActivity extends BaseActivity {
 		}
 		mCurrentFragment = fragment;
 		mCurrentFragment.onResume();
-	}
-
-	private void findview() {
-		mSlidingMenu = (DrawerLayout) findViewById(R.id.drawer_layout);
-		mMenu = findViewById(R.id.left_drawer);
 	}
 
 	private void startViewPage() {

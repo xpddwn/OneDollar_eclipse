@@ -1,14 +1,24 @@
 package com.onedollar.fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 
+import com.example.onedollar.DepositActivity;
+import com.example.onedollar.IdentityActivity;
+import com.example.onedollar.MerchandiseActivity;
+import com.example.onedollar.MyaccountActivity;
+import com.example.onedollar.PaymentActivity;
+import com.example.onedollar.QAActivity;
 import com.example.onedollar.R;
+import com.example.onedollar.SettingActivity;
 import com.onedollar.base.BaseFragment;
 
 /**
@@ -30,7 +40,9 @@ public class MeFragment extends BaseFragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
-
+    private View view;
+    private TextView deposit,payment,myaccount,setting,qa;
+    private Button identity;
     public MeFragment() {
         // Required empty public constructor
     }
@@ -66,7 +78,62 @@ public class MeFragment extends BaseFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_me, container, false);
+        view= inflater.inflate(R.layout.fragment_me, container, false);
+        deposit=(TextView)view.findViewById(R.id.deposit);
+        payment=(TextView)view.findViewById(R.id.payment);
+        myaccount=(TextView)view.findViewById(R.id.account);
+        setting=(TextView)view.findViewById(R.id.settings);
+        qa=(TextView)view.findViewById(R.id.qa);
+        identity=(Button)view.findViewById(R.id.identity);
+        deposit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent();
+                intent.setClass(getActivity(), DepositActivity.class);
+                startActivity(intent);
+            }
+        });
+        payment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent();
+                intent.setClass(getActivity(), PaymentActivity.class);
+                startActivity(intent);
+            }
+        });
+        myaccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent();
+                intent.setClass(getActivity(), MyaccountActivity.class);
+                startActivity(intent);
+            }
+        });
+        setting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent();
+                intent.setClass(getActivity(), SettingActivity.class);
+                startActivity(intent);
+            }
+        });
+        qa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent();
+                intent.setClass(getActivity(), QAActivity.class);
+                startActivity(intent);
+            }
+        });
+        identity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent();
+                intent.setClass(getActivity(), IdentityActivity.class);
+                startActivity(intent);
+            }
+        });
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:RoundImageView="http://schemas.android.com/apk/res/com.shunshunliuxue"
     android:id="@+id/left_drawer"
-    android:layout_width="140dp"
+    android:layout_width="160dp"
     android:layout_height="match_parent"
     android:layout_gravity="left"
     android:background="#ffffff"
-    android:orientation="vertical" >
+    android:orientation="horizontal" >
 
     <LinearLayout
         android:id="@+id/user_toptitle"
@@ -27,7 +26,7 @@
                 android:layout_gravity="center_vertical"
                 android:text="@string/all_goods"
                 android:layout_marginLeft="5dp"
-                android:textColor="#383d49"
+                android:textColor="@color/merchandise_content"
                 android:textSize="18sp" />
         </LinearLayout>
         
@@ -50,13 +49,13 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:text="@string/automobile"
-                android:textColor="#383d49"
+                android:textColor="@color/merchandise_content"
                 android:layout_marginLeft="5dp"
                 android:textSize="18sp" />
         </LinearLayout>
 
         <View
-            android:layout_width="fill_parent"
+            android:layout_width="145dp"
             android:layout_height="0.5dp"
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="5dp"
@@ -75,14 +74,14 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:text="@string/Gold_jewelry"
-                android:textColor="#383d49"
+                android:textColor="@color/merchandise_content"
                 android:layout_marginLeft="5dp"
                 android:textSize="18sp" />
         </LinearLayout>
 
         <View
             android:id="@+id/my_question_devider"
-            android:layout_width="fill_parent"
+            android:layout_width="145dp"
             android:layout_height="0.5dp"
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="5dp"
@@ -100,13 +99,13 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:text="@string/Brand_watch"
-                android:textColor="#383d49"
+                android:textColor="@color/merchandise_content"
                 android:layout_marginLeft="5dp"
                 android:textSize="18sp" />
         </LinearLayout>
 
         <View
-            android:layout_width="fill_parent"
+            android:layout_width="145dp"
             android:layout_height="0.5dp"
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="5dp"
@@ -124,13 +123,13 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:text="@string/Digital_video"
-                android:textColor="#383d49"
+                android:textColor="@color/merchandise_content"
                 android:layout_marginLeft="5dp"
                 android:textSize="18sp" />
         </LinearLayout>
 
         <View
-            android:layout_width="fill_parent"
+            android:layout_width="145dp"
             android:layout_height="0.5dp"
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="5dp"
@@ -148,13 +147,13 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:text="@string/Computer_office"
-                android:textColor="#383d49"
+                android:textColor="@color/merchandise_content"
                 android:layout_marginLeft="5dp"
                 android:textSize="18sp" />
         </LinearLayout>
 
         <View
-            android:layout_width="fill_parent"
+            android:layout_width="145dp"
             android:layout_height="0.5dp"
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="5dp"
@@ -172,17 +171,22 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:text="@string/other"
-                android:textColor="#383d49"
+                android:textColor="@color/merchandise_content"
                 android:layout_marginLeft="5dp"
                 android:textSize="18sp" />
         </LinearLayout>
 
         <View
-            android:layout_width="fill_parent"
+            android:layout_width="145dp"
             android:layout_height="0.5dp"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="10dp"
             android:background="#e5e5e5" />
     </LinearLayout>
+    
+    <View 
+        android:layout_width="10dp"
+        android:layout_height="match_parent"
+        android:background="@color/cart_bg"/>
 
 </LinearLayout>
